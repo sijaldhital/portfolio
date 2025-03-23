@@ -129,3 +129,106 @@ document.addEventListener("DOMContentLoaded", function() {
     
     console.log("Portfolio loaded successfully!");
 });
+// Dark Mode Toggle Functionality
+document.addEventListener("DOMContentLoaded", function() {
+    // Add dark mode toggle to the navigation
+    const navLinks = document.querySelector('.nav-links');
+    const themeSwitch = document.createElement('div');
+    themeSwitch.className = 'theme-switch-wrapper';
+    themeSwitch.innerHTML = `
+        <i class="fas fa-moon theme-icon"></i>
+        <label class="theme-switch">
+            <input type="checkbox" id="theme-toggle">
+            <span class="slider"></span>
+        </label>
+    `;
+    
+    // Insert the toggle before the first nav link
+    navLinks.insertBefore(themeSwitch, navLinks.firstChild);
+    
+    const themeToggle = document.getElementById('theme-toggle');
+    
+    // Check for saved theme preference or use preferred color scheme
+    const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
+    const currentTheme = localStorage.getItem("theme");
+    
+    if (currentTheme === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeToggle.checked = true;
+        updateThemeIcon(true);
+    } else if (currentTheme === "light") {
+        document.documentElement.setAttribute("data-theme", "light");
+        themeToggle.checked = false;
+        updateThemeIcon(false);
+    } else if (prefersDarkScheme.matches) {
+        document.documentElement.setAttribute("data-theme", "dark");
+        themeToggle.checked = true;
+        updateThemeIcon(true);
+    }
+    
+    // Listen for toggle changes
+    themeToggle.addEventListener("change", function(e) {
+        if (e.target.checked) {
+            document.documentElement.setAttribute("data-theme", "dark");
+            localStorage.setItem("theme", "dark");
+            updateThemeIcon(true);
+        } else {
+            document.documentElement.setAttribute("data-theme", "light");
+            localStorage.setItem("theme", "light");
+            updateThemeIcon(false);
+        }
+    });
+    
+    // Update moon/sun icon based on theme
+    function updateThemeIcon(isDark) {
+        const themeIcon = document.querySelector('.theme-icon');
+        if (isDark) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        } else {
+            themeIcon.classList.remove('fa-sun');
+            themeIcon.classList.add('fa-moon');
+        }
+    }
+    
+    // Add toggle for mobile view
+    const mobileThemeSwitch = themeSwitch.cloneNode(true);
+    mobileThemeSwitch.classList.add('mobile-theme-switch');
+    
+    // Style for mobile theme switch
+    const style = document.createElement('style');
+    style.textContent = `
+        .mobile-theme-switch {
+            display: none;
+        }
+        
+        @media screen and (max-width: 768px) {
+            .nav-links .theme-switch-wrapper {
+                display: none;
+            }
+            
+            .mobile-theme-switch {
+                display: flex;
+                position: absolute;
+                top: 15px;
+                right: 70px;
+            }
+        }
+    `;
+    document.head.appendChild(style);
+    
+    document.querySelector('.navbar .container').appendChild(mobileThemeSwitch);
+    
+    // Sync both toggles
+    const mobileToggle = mobileThemeSwitch.querySelector('input');
+    mobileToggle.checked = themeToggle.checked;
+    
+    mobileToggle.addEventListener("change", function(e) {
+        themeToggle.checked = e.target.checked;
+        themeToggle.dispatchEvent(new Event('change'));
+    });
+    
+    themeToggle.addEventListener("change", function(e) {
+        mobileToggle.checked = e.target.checked;
+    });
+});
