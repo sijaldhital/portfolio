@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sijal Dhital | Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script defer src="main.js"></script>
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="#hero">SD</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="hero" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="reveal-text">Sijal Dhital</h1>
+                <div class="typewriter">
+                    <span id="typed-text"></span><span class="cursor-type">|</span>
+                </div>
+                <div class="social-icons">
+                    <a href="https://github.com/sijaldhital" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/sijal-dhital-4421a7290/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:sijaldhital0@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <a href="#about" class="scroll-down">
+                    <span>Scroll Down</span>
+                    <i class="fas fa-chevron-down"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>About Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/sijal.jpg" alt="Sijal Dhital" class="profile-picture">
+                </div>
+                <div class="about-text">
+                    <p>Hello! I am <span class="highlight">Sijal Dhital</span>, a passionate web and software developer with a focus on Python development. I believe in creating clean, efficient, and user-friendly applications that solve real-world problems.</p>
+                    <p>My goal is to make a positive impact on the world through innovative technology solutions. I enjoy learning new technologies and continuously improving my skills.</p>
+                    <div class="skills">
+                        <h3>Skills</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">HTML</span>
+                            <span class="skill-tag">CSS</span>
+                            <span class="skill-tag">JavaScript</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Django</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Education</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2021 - Present</span>
+                        <h3>Presidential Business School</h3>
+                        <p>Bachelor of Science in Information Technology</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2017 - 2019</span>
+                        <h3>Trinity International College</h3>
+                        <p>High School</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <span class="date">2004 - 2017</span>
+                        <h3>Siddhartha Vanasthali Institute</h3>
+                        <p>Primary and Secondary Education</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2>Projects</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/textutils.png" alt="Text Utility">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sijaldhital/TextUtility_python-django-" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Text Utility</h3>
+                        <p>A Django-based application that helps users analyze and manipulate text efficiently.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/blogapp.png" alt="Blog App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sijaldhital/Blog_App_django" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Blog App</h3>
+                        <p>A platform that allows users to express their thoughts and ideas by creating blog posts.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>SQLite</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/weatherapp.png" alt="Weather App">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sijaldhital/Weather_App" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather App</h3>
+                        <p>An application that allows users to check real-time weather updates by entering a city name.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>OpenWeather API</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="images/ecom.jpg" alt="Ecommerce Website">
+                        <div class="project-overlay">
+                            <a href="https://github.com/sijaldhital/django-ecommerce" target="_blank" class="project-link">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://sijald.com.np/" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Full-Stack Ecommerce Website</h3>
+                        <p>A comprehensive e-commerce platform with user authentication, product management, and order processing.</p>
+                        <div class="project-tech">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>Bootstrap</span>
+                            <span>JS</span>
+                            <span>PostgreSQL</span>
+                            <span>Railway</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section section-dark">
+        <div class="container">
+            <div class="section-header">
+                <h2>Contact Me</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <h3>Email</h3>
+                        <p><a href="mailto:sijaldhital0@gmail.com">sijaldhital0@gmail.com</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+9779863312443">+977 9863312443</a></p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <h3>Location</h3>
+                        <p>Kathmandu, Nepal</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Sijal Dhital. All Rights Reserved.</p>
+            <div class="footer-social">
+                <a href="https://github.com/sijaldhital" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/sijal-dhital-4421a7290/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:sijaldhital0@gmail.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
