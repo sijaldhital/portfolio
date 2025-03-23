@@ -827,9 +827,9 @@ footer p {
     .timeline::before {
         left: 20px;
     }
-
-    /* Dark Mode Styles */
-:root {
+}
+ /* Dark Mode Styles */
+ :root {
     /* Original Light Theme Variables */
     --primary-color: #007bff;
     --secondary-color: #6c757d;
@@ -963,5 +963,4 @@ input:checked + .slider:before {
 
 [data-theme="dark"] footer {
     background-color: #0a0a0a;
-}
 }
