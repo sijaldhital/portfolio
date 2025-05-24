@@ -76,6 +76,7 @@ document.addEventListener("DOMContentLoaded", function() {
     const textArray = [
         "Web/Software Developer",
         "Python Enthusiast",
+        "Exploring Machine Learning"
     ];
     
     let textIndex = 0;
