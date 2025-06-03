@@ -74,9 +74,9 @@ document.addEventListener("DOMContentLoaded", function() {
     // Typewriter effect
     const typedTextElement = document.getElementById('typed-text');
     const textArray = [
-        "Web/Software Developer",
-        "Python Enthusiast",
-        "Exploring Machine Learning"
+        "Web and Software Developer",
+        "Python and Django Developer",
+        "AI and Machine Learning Enthusiast"
     ];
     
     let textIndex = 0;
